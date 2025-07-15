@@ -172,7 +172,38 @@
 
 
 </style>
-</head>
+<style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      padding: 10px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .button-group button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .button-group {
+        justify-content: center;
+      }
+
+      .button-group button {
+        width: 100%;
+      }
+    }
+    </style></head>
 <body>
 <style>
 .container {
@@ -198,13 +229,11 @@
 </select>
 <select>
 <option disabled="" selected="">Select the year</option>
-
 <option>2024(2025)</option>
 </select>
 <select>
 <option disabled="" selected="">Select Method</option>
 <option>Index</option>
-
 </select>
 <input placeholder="Enter Your Index or NIC" type="text"/>
 </div>
@@ -266,17 +295,10 @@
   });
 </script>
 <div class="form-group" style="margin-top: 25px;">
-
-<form id="resultForm" onsubmit="return validateCaptcha()" action="result-page.html" method="get">
-    <!-- Your existing input fields can be placed here -->
-
-    
-    
-
-
-    <button type="submit" style="background-color: #007BFF; color: white; border: none; padding: 8px 16px; border-radius: 4px;">Submit</button>
+<form action="result-page.html" id="resultForm" method="get" onsubmit="return validateCaptcha()">
+<!-- Your existing input fields can be placed here -->
+<button style="background-color: darkblue; color: white;" type="submit">Submit</button>
 </form>
-
 <script>
   function validateCaptcha() {
     var input = document.getElementById("captchaInput").value;
@@ -291,14 +313,10 @@
     
   }
 </script>
-
-<button class="reset-btn" style="background-color: #007BFF; color: white; border: none; padding: 8px 16px; border-radius: 4px;" style="background-color: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 4px;" style="background-color: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 6px;">Reset</button>
+<button class="reset-btn" style="background-color: maroon; color: white;">Reset</button>
 </div>
 <div class="action-links">
-<button style="background-color: #007BFF; color: white; border: none; padding: 8px 16px; border-radius: 4px;">Print</button>
-<button style="background-color: #007BFF; color: white; border: none; padding: 8px 16px; border-radius: 4px;">Other Examination Results</button>
 </div>
-
 <footer>
 <p>©- </p>
 </footer>
@@ -319,5 +337,18 @@
   });
 </script>
 <div style="text-align: center; margin-top: 20px;"><img alt="Footer Banner" src="img/footer-extra.png" style="max-width: 100%; height: auto;"/></div>
-</body>
+<button style="border: 1px solid #28c76f; background-color: transparent; color: #28c76f; padding: 8px 16px; border-radius: 5px; font-weight: bold; cursor: pointer;">Print</button><button style="border: 1px solid #00cfe8; background-color: transparent; color: #00cfe8; padding: 8px 16px; border-radius: 5px; font-weight: bold; cursor: pointer; margin-left: 10px;">Other Examination Results</button><div style="text-align: right; margin-top: 20px;"><button style=" border: 1px solid #28c76f;
+  background-color: transparent;
+  color: #28c76f;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;">Print</button><button style="border: 1px solid #00cfe8;
+  background-color: transparent;
+  color: #00cfe8;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;">Other Examination Results</button></div></body>
 </html>
